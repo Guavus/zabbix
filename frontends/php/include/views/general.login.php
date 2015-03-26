@@ -1,7 +1,7 @@
 <?php
 /*
 ** Zabbix
-** Copyright (C) 2001-2013 Zabbix SIA
+** Copyright (C) 2000-2011 Zabbix SIA
 **
 ** This program is free software; you can redistribute it and/or modify
 ** it under the terms of the GNU General Public License as published by
@@ -10,7 +10,7 @@
 **
 ** This program is distributed in the hope that it will be useful,
 ** but WITHOUT ANY WARRANTY; without even the implied warranty of
-** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ** GNU General Public License for more details.
 **
 ** You should have received a copy of the GNU General Public License
@@ -44,8 +44,7 @@ require_once dirname(__FILE__).'/../page_header.php';
 			<div style="position: absolute; top: 39%; left: 2%;" class="loginLogo"></div>
 			<div style="position: absolute; bottom: 2px;">
 				<span class="bold textwhite" style="margin: 0 0 4px 4px; font-size: 0.9em; opacity: 0.7;">
-					<?php echo _s('Zabbix %1$s Copyright %2$s-%3$s by Zabbix SIA',
-						ZABBIX_VERSION, ZABBIX_COPYRIGHT_FROM, ZABBIX_COPYRIGHT_TO); ?>
+					<?php echo _s('Zabbix %s Copyright 2001-2012 by Zabbix SIA', ZABBIX_VERSION); ?>
 				</span>
 			</div>
 		</div>
@@ -60,11 +59,11 @@ require_once dirname(__FILE__).'/../page_header.php';
 				</li>
 				<li style="margin-top: 10px; padding-top: 1px; height: 22px; width: 265px; background-image: url(images/general/login/username_pass_field.png); background-repeat: no-repeat; white-space: nowrap;" >
 					<div class="bold" style="display: inline-block; zoom: 1; *display: inline; *margin-right: 2px; font-size: 1.1em; width: 70px; padding-left: 10px; line-height: 22px;"><?php echo _('Username'); ?></div>
-					<input type="text" id="name" name="name" class="input bold transparent" style="color: #5f5f5f; height: 16px; line-height: 16px; width: 170px;" />
+					<input type="text" id="name" name="name" class="input bold transparent" style="color: #5f5f5f; height: 16px; line-height: 16px;" autocomplete="off"/>
 				</li>
 				<li style="margin-top: 10px; padding-top: 1px; height: 22px; width: 265px; background-image: url(images/general/login/username_pass_field.png); background-repeat: no-repeat; white-space: nowrap;" >
 					<div class="bold" style="display: inline-block; zoom: 1; *display: inline; *margin-right: 2px; font-size: 1.1em; width: 70px; padding-left: 10px; line-height: 22px;"><?php echo _('Password'); ?></div>
-					<input type="password" id="password" name="password" class="input bold transparent" style="color: #5f5f5f; height: 16px; line-height: 16px; width: 170px;" />
+					<input type="password" id="password" name="password" class="input bold transparent" style="color: #5f5f5f; height: 16px; line-height: 16px;" autocomplete="off"/>
 				</li>
 				<li style="margin-top: 8px; margin-left: 64px;">
 					<input type="checkbox" id="autologin" name="autologin" value="1" <?php echo (get_request('autologin', 1) == 1) ? 'checked="checked"' : ''; ?> />
